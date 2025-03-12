@@ -1,0 +1,9 @@
+import requests
+
+url = "https://ton-api.onrender.com/predict"
+data = {"features": [5.1, 3.5, 1.4, 0.2]}
+headers = {"Content-Type": "application/json"}
+
+response = requests.post(url, json=data, headers=headers, verify=False)  # 🔹 Désactiver SSL
+
+print(response.json())
